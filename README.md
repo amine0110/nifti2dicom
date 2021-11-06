@@ -5,6 +5,8 @@ This repository contains the complete code for converting nifti files to dicom s
 
 You can simply clone this repository and begin using it. All of the details can be found on my blog, which I dedicated to this function.
 
+[Here is the article](https://pycad.co/nifti2dicom/)
+
 ## The steps
 
 - Using pre-existing dicom file.

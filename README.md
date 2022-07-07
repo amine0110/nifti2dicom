@@ -54,7 +54,7 @@ def convertNsave(arr,file_dir, index=0):
     dicom_file.save_as(os.path.join(file_dir, f'slice{index}.dcm'))
 ```
 
-## NEW 🆕
+## Conversion tools
 
 You may face problems with the method provided above, for this reason I found anouther way to do the conversion correctly using [SimpleITK](https://simpleitk.readthedocs.io/en/next/Examples/DicomSeriesFromArray/Documentation.html) example that conversion an array into dicom series.
 
@@ -63,3 +63,10 @@ I tried to put everything together in one GUI to facilitate the work for you and
 ![image](https://user-images.githubusercontent.com/37108394/156250547-adc5dc2a-ac13-44e8-a078-30a7393f43ce.png)
 
 Please see [this link](https://pycad.co/pycad-convert/) for more information about the GUI.
+
+
+## 🆕 NEW
+
+Full course about medical imaging segmentation is coming soon, join the waitlist here:
+
+https://pycad.co/monai-and-pytoch-for-medical-imaging/

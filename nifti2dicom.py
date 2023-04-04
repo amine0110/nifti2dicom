@@ -23,8 +23,12 @@ def convertNsave(arr,file_dir, index=0):
     dicom_file.BitsAllocated = 16
     dicom_file.HighBit = 15
     dicom_file.PixelRepresentation = 1
+    dicom_file.InstanceNumber = index + 1
+    dicom_file.SeriesNumber = 0
+    dicom_file.Manufacturer = 'PYCAD'
+    dicom_file.SeriesDescription = 'Created-Pycad'
     dicom_file.PixelData = arr.tobytes()
-    dicom_file.save_as(os.path.join(file_dir, f'slice{index}.dcm'))
+    dicom_file.save_as(os.path.join(file_dir, f'slice{str(index).zfill(4)}.dcm'))
 
 
 def nifti2dicom_1file(nifti_dir, out_dir):

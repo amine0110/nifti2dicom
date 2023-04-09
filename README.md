@@ -59,7 +59,7 @@ def convertNsave(arr,file_dir, index=0):
 | --- | --- | --- |
 | [1.0.0](https://github.com/amine0110/nifti2dicom/releases/tag/v1.0.0) | Convert nifti to dicom by filling an existing dicom file with the new information | All the slices have the same `Series Number` | 
 | [1.1.0](https://github.com/amine0110/nifti2dicom/releases/tag/v1.1.0) | The same method as the previous version | The generated dicoms can't be opened in all the medical imaging software |
-
+| [2.0.0](https://github.com/amine0110/nifti2dicom/releases/tag/v2.0.0) | New method based on [SimpleITK](https://simpleitk.readthedocs.io/en/next/Examples/DicomSeriesFromArray/Documentation.html) | All the previous issues are resolved |
 
 
 ## 🆕 NEW

@@ -54,15 +54,12 @@ def convertNsave(arr,file_dir, index=0):
     dicom_file.save_as(os.path.join(file_dir, f'slice{index}.dcm'))
 ```
 
-## Conversion tools
+## Versions 🚀
+| Version | Description| Limitation |
+| --- | --- | --- |
+| [1.0.0](https://github.com/amine0110/nifti2dicom/releases/tag/v1.0.0) | Convert nifti to dicom by filling an existing dicom file with the new information | All the slices have the same `Series Number` | 
+| [1.1.0](https://github.com/amine0110/nifti2dicom/releases/tag/v1.1.0) | The same method as the previous version | The generated dicoms can't be opened in all the medical imaging software |
 
-You may face problems with the method provided above, for this reason I found anouther way to do the conversion correctly using [SimpleITK](https://simpleitk.readthedocs.io/en/next/Examples/DicomSeriesFromArray/Documentation.html) example that conversion an array into dicom series.
-
-I tried to put everything together in one GUI to facilitate the work for you and you can do the conversion for one single file or a directory with a single click. It will look like this:
-
-![image](https://user-images.githubusercontent.com/37108394/156250547-adc5dc2a-ac13-44e8-a078-30a7393f43ce.png)
-
-Please see [this link](https://pycad.co/pycad-convert/) for more information about the GUI.
 
 
 ## 🆕 NEW

@@ -17,15 +17,11 @@ You can simply clone this repository and begin using it. All of the details can 
 - Convert multiple nifti files into multiple dicom series.
 
 ## The Packages that We Need
-As with any other program, we need some packages to complete this conversion, so in this project, you will need to install the following packages individually.
+You can install the requirements with:
 
-- nibabel: ```pip install nibabel```
-
-- pydicom: `pip install pydicom`
-
-- numpy: `pip install numpy`
-
-- tqdm: `pip install tqdm` (this one is just to print the progress of the conversion)
+```bash
+pip install -r requirements.txt
+```
 
 ## The main function
 

@@ -53,7 +53,6 @@ def nifti2dicom_1file(in_dir, out_dir):
                     ("0008|103e", "Created-Pycad")] # Series Description
 
     # Write slices to output directory
-    range(new_img.GetDepth())
     list(map(lambda i: writeSlices(series_tag_values, new_img, i, out_dir), range(new_img.GetDepth())))
 
 def nifti2dicom_mfiles(nifti_dir, out_dir=''):

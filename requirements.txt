@@ -1,5 +1,4 @@
 nibabel
 pydicom
-nibabel
 tqdm
 SimpleITK

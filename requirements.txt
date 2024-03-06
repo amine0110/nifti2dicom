@@ -1,0 +1,4 @@
+nibabel
+pydicom
+tqdm
+SimpleITK

@@ -21,7 +21,7 @@ def writeSlices(series_tag_values, new_img, i, out_dir):
 
     # (0020, 0032) image position patient determines the 3D spacing between slices.
     image_slice.SetMetaData("0020|0032", '\\'.join(map(str,new_img.TransformIndexToPhysicalPoint((0,0,i))))) # Image Position (Patient)
-    image_slice.SetMetaData("0020,0013", str(i)) # Instance Number
+    image_slice.SetMetaData("0020|0013", str(i)) # Instance Number
 
     # Write to the output directory and add the extension dcm, to force writing in DICOM format.
     writer.SetFileName(os.path.join(out_dir,'slice' + str(i).zfill(4) + '.dcm'))
@@ -47,6 +47,7 @@ def nifti2dicom_1file(in_dir, out_dir):
                     ("0008|0021",modification_date), # Series Date
                     ("0008|0008","DERIVED\\SECONDARY"), # Image Type
                     ("0020|000e", "1.2.826.0.1.3680043.2.1125."+modification_date+".1"+modification_time), # Series Instance UID
+                    ("0020|000d", "1.2.826.0.1.3680043.2.1125.1"+modification_date+modification_time), # Study Instance UID
                     ("0020|0037", '\\'.join(map(str, (direction[0], direction[3], direction[6],# Image Orientation (Patient)
                                                         direction[1],direction[4],direction[7])))),
                     ("0008|103e", "Created-Pycad")] # Series Description
